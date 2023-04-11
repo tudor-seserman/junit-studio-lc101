@@ -2,6 +2,7 @@ package test;
 
 import main.BonusBinarySearch;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -16,6 +17,7 @@ public class BonusBinarySearchTest {
     @Before
     public void beforeRun(){
         sortedNumbs = new int[]{1, 5, 6, 7, 10};
+
         sortedNumbs2 = new int[]{1, 5, 6, 7, 10, 11};
         one =1;
         ten = 10;

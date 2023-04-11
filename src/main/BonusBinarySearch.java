@@ -17,23 +17,21 @@ public class BonusBinarySearch {
         int right = sortedNumbers.length - 1;
         int left = 0;
 
-
                 while (right >= left) {
-                   int  mid = left + ((right - left) / 2);
-//                    System.out.println("Right:"+right+"\n"+
-//                            "Left:"+left+"\nMid:"+
-//                            mid);
+                    int  mid = left + ((right - left) / 2);
                     if (sortedNumbers[mid] > n) {
-                        right--;
+                        right = mid-1;
                     } else if (sortedNumbers[mid] < n) {
-                        left++;
+                        left = mid+1;
                     } else {
                         return mid;
 
                     }
                 }
 
-
+//        System.out.println("Right:"+right+"\n"+
+//                            "Left:"+left+"\nMid:"+
+//                            mid);
 
         return -1;
     }
