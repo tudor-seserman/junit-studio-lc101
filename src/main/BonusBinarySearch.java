@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Arrays;
+
 public class BonusBinarySearch {
 
     /**
@@ -14,16 +16,25 @@ public class BonusBinarySearch {
     public static int binarySearch(int[] sortedNumbers, int n) {
         int right = sortedNumbers.length - 1;
         int left = 0;
-        while (right >= left) {
-            int mid = left + ((right - left) / 2);
-            if (sortedNumbers[mid] > n) {
-                right = mid;
-            } else if (sortedNumbers[mid] < n) {
-                left = mid;
-            } else {
-                return mid;
-            }
-        }
+
+
+                while (right >= left) {
+                   int  mid = left + ((right - left) / 2);
+//                    System.out.println("Right:"+right+"\n"+
+//                            "Left:"+left+"\nMid:"+
+//                            mid);
+                    if (sortedNumbers[mid] > n) {
+                        right--;
+                    } else if (sortedNumbers[mid] < n) {
+                        left++;
+                    } else {
+                        return mid;
+
+                    }
+                }
+
+
+
         return -1;
     }
 
